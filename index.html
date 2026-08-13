@@ -1,0 +1,282 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naza Ibarrola | Marketing & Diseño</title>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Tu Paleta de Colores Personalizada */
+        :root {
+            --fondo: #fff5e4;
+            --verde: #c3dc9f;
+            --rosa: #ffc3c4;
+            --amarillo: #feca73;
+            --texto-oscuro: #2c3e50;
+            --texto-claro: #7f8c8d;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--fondo);
+            color: var(--texto-oscuro);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* --- SALUDO / HERO --- */
+        header {
+            text-align: center;
+            padding: 120px 20px 80px 20px;
+        }
+        h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+        }
+        .highlight {
+            background-color: var(--amarillo);
+            padding: 0 10px;
+            border-radius: 10px;
+        }
+        p.subtitle {
+            font-size: 1.3em;
+            color: var(--texto-claro);
+            margin: 0 auto 40px auto;
+            line-height: 1.6;
+            max-width: 700px;
+        }
+        .btn-rosa {
+            background-color: var(--rosa);
+            color: var(--texto-oscuro);
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 40px;
+            font-size: 1.1em;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        .btn-rosa:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 195, 196, 0.8);
+        }
+
+        /* --- SECCIONES DE TÍTULO --- */
+        .section-title {
+            text-align: center;
+            font-size: 2.2em;
+            margin-top: 60px;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .section-title span {
+            border-bottom: 4px solid var(--verde);
+        }
+
+        /* --- CUADRÍCULA DE PROYECTOS --- */
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding-bottom: 40px;
+        }
+        .project {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s;
+            border: 2px solid transparent;
+        }
+        .project:hover {
+            transform: translateY(-8px);
+            border: 2px solid var(--amarillo);
+        }
+        .tag {
+            background-color: var(--verde);
+            color: var(--texto-oscuro);
+            font-size: 0.8em;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .tag-amarillo { background-color: var(--amarillo); }
+        .project-info {
+            padding: 25px;
+        }
+        .project-info h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.4em;
+        }
+        .project-info p {
+            color: var(--texto-claro);
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* --- HERRAMIENTAS & EQUIPO --- */
+        .tools-container {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .tool-badge {
+            background-color: white;
+            color: var(--texto-oscuro);
+            border: 2px solid var(--verde);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 1em;
+            font-weight: 600;
+            display: inline-block;
+            margin: 6px;
+            transition: all 0.3s;
+        }
+        .tool-badge:hover {
+            background-color: var(--verde);
+            transform: translateY(-3px);
+        }
+        .tool-badge.hardware {
+            border-color: var(--amarillo);
+        }
+        .tool-badge.hardware:hover {
+            background-color: var(--amarillo);
+        }
+
+        /* --- BACKSTAGE (VIDEOS) --- */
+        .backstage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+        .ig-link {
+            background-color: white;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--texto-oscuro);
+            font-weight: 600;
+            border: 2px dashed var(--rosa);
+            transition: all 0.3s;
+        }
+        .ig-link:hover {
+            background-color: var(--rosa);
+            border-style: solid;
+        }
+
+        /* --- FOOTER / CONTACTO --- */
+        footer {
+            text-align: center;
+            padding: 80px 20px;
+            background-color: white;
+            border-top: 4px solid var(--verde);
+        }
+        .social-links a {
+            color: var(--texto-oscuro);
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 15px;
+            font-size: 1.1em;
+            background-color: var(--fondo);
+            padding: 10px 20px;
+            border-radius: 20px;
+            transition: 0.3s;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .social-links a:hover {
+            background-color: var(--amarillo);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SALUDO -->
+    <header class="container">
+        <h1>¡Hola! Soy <span class="highlight">Naza</span></h1>
+        <p class="subtitle">
+            Especialista en Marketing & Diseño.<br>
+            Ayudo a marcas creando contenido y estrategias que combinan creatividad y objetivos reales. Me gusta transformar ideas en propuestas visuales que conecten, comuniquen y vendan.
+        </p>
+        <a href="#contacto" class="btn-rosa">Hablemos de tu proyecto</a>
+    </header>
+
+    <div class="container">
+        <!-- MARCAS PROPIAS -->
+        <h2 class="section-title"><span>Marcas creadas por mí</span></h2>
+        <div class="portfolio">
+            <div class="project">
+                <div class="project-info">
+                    <span class="tag tag-amarillo">Branding & Concepto</span>
+                    <h3>Pipón</h3>
+                    <p>Emprendimiento de comida al paso. Creé la identidad visual desde cero, el diseño de packaging, el concepto de la marca y actualmente manejo toda la estrategia y contenido en redes sociales.</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-info">
+                    <span class="tag tag-amarillo">Diseño & Gestión</span>
+                    <h3>Inkspira</h3>
+                    <p>Mi propio estudio de diseño gráfico y papelería. Desarrollé absolutamente todo: identidad, productos, fotografía, videos y comunicación integral de la marca.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPERIENCIA -->
+        <h2 class="section-title"><span>Experiencia & Colaboraciones</span></h2>
+        <div class="portfolio">
+            <div class="project">
+                <div class="project-info">
+                    <span class="tag">Estrategia Integral (3 años)</span>
+                    <h3>Modashop</h3>
+                    <p>Asistencia a franquicias, ideación de campañas y sesiones de fotos. Manejo de CRM y trato con prospectos. Mantenimiento estético de la web, gestión del e-commerce y creación de contenido en video.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- HERRAMIENTAS Y EQUIPO -->
+        <h2 class="section-title"><span>Herramientas & Equipo</span></h2>
+        <div class="tools-container">
+            <span class="tool-badge">Adobe Illustrator</span>
+            <span class="tool-badge">Photoshop</span>
+            <span class="tool-badge">Lightroom</span>
+            <span class="tool-badge">Canva Pro</span>
+            <span class="tool-badge">CapCut</span>
+            <span class="tool-badge hardware">iPhone 15 Pro Max</span>
+            <span class="tool-badge hardware">PC de Diseño</span>
+        </div>
+
+        <!-- BACKSTAGE & EDICIÓN -->
+        <h2 class="section-title"><span>Edición de Video & Backstage</span></h2>
+        <p style="text-align: center; color: var(--texto-claro); margin-bottom: 30px;">Un vistazo a mis procesos creativos, rodajes y colaboraciones.</p>
+        
+        <div class="backstage-grid">
+            <a href="https://www.instagram.com/p/DYrthXiRh-s/" target="_blank" class="ig-link">🎬 Campaña Modashop Teen</a>
+            <a href="https://www.instagram.com/p/DUbMgKBDr2X/" target="_blank" class="ig-link">✨ Colab. Tendens Accesorios</a>
+            <a href="https://www.instagram.com/p/DXRpqt9Djb2/" target="_blank" class="ig-link">🎪 Feria Emprendedoras</a>
+            <a href="https://www.instagram.com/p/DXALJy3CRQn/" target="_blank" class="ig-link">🎨 La esencia de Inkspira</a>
+        </div>
+    </div>
+
+    <!-- CONTACTO -->
+    <footer id="contacto">
+        <h2 style="font-size: 2.5em; margin-bottom: 10px;">¿Trabajamos juntos?</h2>
+        <p style="color: var(--texto-claro); margin-bottom: 40px; font-size: 1.2em;">Basada en Concordia, Entre Ríos. <br>Con amplia experiencia trabajando de forma remota.</p>
+        
+        <div class="social-links">
+            <a href="https://wa.me/93454263127" target="_blank">WhatsApp</a>
+            <a href="mailto:nazarena.ibarrola@gmail.com">Email</a>
+            <a href="https://www.linkedin.com/in/nazarena-agostina-ibarrola" target="_blank">LinkedIn</a>
+            <a href="https://www.instagram.com/nazaibarrola/" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+</body>
+</html>
